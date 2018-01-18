@@ -50,7 +50,7 @@ class Star{
     c = new Couleur();
     }
     
-  void update(float speed){
+  void update(float speed){         // change the z value which is assimilated to the 'speed'
     z = z-speed;
     if(z<1){
       x = random(-width, width);
@@ -63,7 +63,7 @@ class Star{
     fill(c.getCouleur());
     noStroke();
       
-    float sx = map(x/z,0,1,0,width);
+    float sx = map(x/z,0,1,0,width);  // z is used for a ration to give an movement and acceleration effect 
     float sy = map(y/z,0,1,0,width);
       
     float r = map(z,width,0,0,8);
